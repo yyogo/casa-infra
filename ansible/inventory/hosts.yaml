@@ -1,0 +1,8 @@
+---
+kubernetes:
+  children:
+    controllers:
+      hosts:
+        "kingkong":
+          ansible_user: "yogo"
+          ansible_host: "192.168.2.78"
