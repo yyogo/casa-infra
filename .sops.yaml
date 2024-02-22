@@ -9,3 +9,13 @@ creation_rules:
     key_groups:
       - age:
           - "age1sw66dv4ns66xaarwhwk9rfx75qturah93ze28nx3v9qz24vx2qmsewu6v4"
+  # encrypted values for helm charts
+  - path_regex: .*values.yaml$
+    key_groups:
+      - age:
+          - "age1sw66dv4ns66xaarwhwk9rfx75qturah93ze28nx3v9qz24vx2qmsewu6v4"
+  - path_regex: ".*\\.yaml"
+    encrypted_regex: ^(data|stringData)$
+    key_groups:
+      - age:
+          - "age1sw66dv4ns66xaarwhwk9rfx75qturah93ze28nx3v9qz24vx2qmsewu6v4"

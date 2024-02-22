@@ -33,12 +33,10 @@ spec:
         kind: HelmRepository
         name: ww-gitops
   interval: 1h0m0s
+  valuesFrom:
+    - kind: Secret
+      name: weave-admin-password
   values:
     adminUser:
       create: true
       username: admin
-      passwordHash:
-        valueFrom:
-          secretKeyRef:
-            name: weave-admin-password
-            key: passwordHash
